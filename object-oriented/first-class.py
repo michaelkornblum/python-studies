@@ -1,14 +1,14 @@
 class PlayerCharacter():
     membership = True
     def __init__(self, name="anon", age=0):
-        self.name = name
-        self.age = age
+        self._name = name
+        self._age = age
 
     def run(self):
         return f"{self.name} is running."
 
     def shout(self):
-        return f"My name is {self.name}, and I am {self.age} years old!!!"
+        return f"My name is {self._name}, and I am {self._age} years old!!!"
 
     @classmethod
     def adding_things(cls, num1, num2):
