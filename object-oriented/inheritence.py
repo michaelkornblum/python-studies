@@ -1,4 +1,7 @@
 class User():
+    def __init__(self, email):
+        self.email = email
+
     def sign_in(self):
         print('logged in')
 
@@ -7,7 +10,8 @@ class User():
 
 
 class Wizard(User):
-    def __init__(self, name, power):
+    def __init__(self, name, power, email):
+        super().__init__(email)
         self.name = name
         self.power = power
 
@@ -26,8 +30,8 @@ class Archer(User):
         print(f'Firing a crossbow. Arrows remaining: {self.arrows}')
 
 
-wizard1 = Wizard('Bob', 'Fireball')
-archer1 = Archer('Steve', 100)
+wizard1 = Wizard('Bob', 'Fireball', 'bob@gmail.com')
+# archer1 = Archer('Steve', 100)
 # print(wizard1.sign_in())
 # print(archer1.sign_in())
 # wizard1.attack()
@@ -36,8 +40,10 @@ archer1 = Archer('Steve', 100)
 # print(isinstance(archer1, User))
 # print(isinstance(wizard1, object))
 
-def player_attack(char):
-    char.attack()
+# def player_attack(char):
+#     char.attack()
 
-player_attack(wizard1)
-player_attack(archer1)
+# player_attack(wizard1)
+# player_attack(archer1)
+
+print(wizard1.email)
