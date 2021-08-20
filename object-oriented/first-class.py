@@ -8,7 +8,7 @@ class PlayerCharacter():
         return f"{self.name} is running."
 
     def shout(self):
-        return f"My name is {self.name}!!!"
+        return f"My name is {self.name}, and I am {self.age} years old!!!"
 
     @classmethod
     def adding_things(cls, num1, num2):
@@ -18,7 +18,8 @@ class PlayerCharacter():
     def adding_things2(num1, num2):
         return num1 + num2
 
-# player_one = PlayerCharacter('Michael', 50)
+player_one = PlayerCharacter('Michael', 50)
+print(player_one.shout())
 # player_two = PlayerCharacter('Roosevelt', 15)
 # print(player_one.name, player_one.age)
 # print(player_two.name, player_two.age)
@@ -26,6 +27,8 @@ class PlayerCharacter():
 
 # print(PlayerCharacter.adding_things(2, 3))
 
-player3 = PlayerCharacter.adding_things(2, 3)
-print(player3.age)
+# player3 = PlayerCharacter.adding_things(2, 3)
+# print(player3.age)
+
+
 
